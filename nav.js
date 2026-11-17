@@ -24,7 +24,6 @@ if (!document.querySelector(".profile-wrapper")) {
                 <div id="loggedInSection">
                     <div class="user-info">
                         <span id="userRole">guest</span>
-                        <span id="userClearance">Clearance Level 1</span>
                     </div>
                     <hr>
                     <a href="ExternalPages/account.html">My Account</a>
@@ -92,14 +91,14 @@ async function loadUser(user) {
         loggedOutSection.style.display = "none";
 
         const roleBadge = document.getElementById("userRole");
-        const clearanceBadge = document.getElementById("userClearance");
         const bowLink = document.getElementById("bowLink");
         const adminLink = document.getElementById("adminLink");
 
         if (roleBadge) roleBadge.textContent = role;
-        if (clearanceBadge) clearanceBadge.textContent = "Clearance Level " + clearance;
         if (bowLink) bowLink.style.display = parseInt(clearance) >= 4 ? "block" : "none";
-        if (adminLink) adminLink.style.display = parseInt(clearance) >= 6 ? "block" : "none";
+        if (adminLink) {
+            adminLink.style.display = role === "admin" && Number(clearance) >= 6 ? "block" : "none";
+        }
 
     } else {
         localStorage.clear();
