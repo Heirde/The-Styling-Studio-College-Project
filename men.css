@@ -383,12 +383,21 @@ footer {
 
 @media (max-width: 600px) {
     nav {
-        flex-wrap: wrap;
-        padding: 10px 16px;
-        gap: 8px 16px;
+        position: relative;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 8px 12px;
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 10px 8px;
+        font-size: 0.95rem;
     }
 
     .profile-wrapper {
+        position: static;
+        border-left: none;
         margin-left: auto;
     }
 
@@ -397,7 +406,12 @@ footer {
     }
 
     .profile-dropdown {
-        width: calc(100vw - 32px);
+        position: absolute;
+        top: 100%;
+        left: 16px;
+        right: 16px;
+        width: auto;
+        max-width: none;
     }
 
     .category-container {
