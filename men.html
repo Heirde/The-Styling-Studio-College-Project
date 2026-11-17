@@ -12,6 +12,57 @@
         <a href="index.html" class="nav-button">Kids</a>
         <a href="women.html" class="nav-button">Women</a>
         <a href="men.html" class="nav-button">Men</a>
+        <div class="profile-wrapper">
+            <button class="profile-btn">
+                <div class="profile-avatar" id="profileAvatar">?</div>
+                <span class="profile-name" id="profileName">Guest</span>
+                <span class="profile-chevron">›</span>
+            </button>
+            <div class="profile-dropdown" id="profileDropdown">
+
+                <div id="loggedInSection">
+                    <div class="user-info">
+                        <span id="userRole">guest</span>
+                    </div>
+                    <hr>
+                    <a href="ExternalPages/account.html">My Account</a>
+                    <a href="ExternalPages/settings.html">Settings</a>
+                    <a href="admin.html" id="adminLink" style="display:none;">⚙ Admin Panel</a>
+                    <hr>
+                    <a href="#" class="signout">Sign Out</a>
+                </div>
+
+                <div id="loggedOutSection">
+                    <div class="dropdown-login">
+
+                        <div id="signInForm">
+                            <p class="dropdown-login-title">Sign In</p>
+                            <input type="email" id="dropdownEmail" placeholder="Email">
+                            <input type="password" id="dropdownPassword" placeholder="Password">
+                            <button class="dropdown-login-btn" id="dropdownLoginBtn">Sign In</button>
+                            <p class="dropdown-toggle-text">
+                                <span id="forgotPassword">Forgot Password?</span>
+                            </p>
+                            <p class="dropdown-toggle-text">No account?
+                                <span id="showSignUp">Register</span>
+                            </p>
+                        </div>
+
+                        <div id="signUpForm" style="display: none;">
+                            <p class="dropdown-login-title">Create Account</p>
+                            <input type="text" id="signUpFirstName" placeholder="First name">
+                            <input type="text" id="signUpLastName" placeholder="Last name">
+                            <input type="email" id="signUpEmail" placeholder="Email">
+                            <input type="password" id="signUpPassword" placeholder="Password">
+                            <button class="dropdown-login-btn" id="dropdownSignUpBtn">Create Account</button>
+                            <p class="dropdown-toggle-text">Have an account? 
+                                <span id="showSignIn">Sign In</span>
+                            </p>
+                        </div>
+
+                    </div>
+</div>
+</div>
     </nav>
     
     <div class="category-container">
