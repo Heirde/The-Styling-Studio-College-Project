@@ -50,6 +50,8 @@ nav {
 .category-card {
     display: grid;
     place-items: center;
+    position: relative;
+    overflow: hidden;
     min-height: 300px;
     background-color: #c9d2da;
     color: var(--nav);
@@ -59,10 +61,32 @@ nav {
     text-decoration: none;
 }
 
+.category-card h3 {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    z-index: 1;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: rgba(36, 36, 36, 0.88);
+    color: var(--mtext);
+    font-size: 1.25rem;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+}
+
 .category-card-wide {
     grid-column: span 2;
-    min-height: 380px;
+    min-height: 300px;
     cursor: pointer;
+}
+
+.category-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Profile Dropdown styles */
