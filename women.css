@@ -136,7 +136,8 @@ nav {
 .profile-dropdown {
     position: fixed;
     top: 56px;
-    right: 20px;
+    right: 0;
+    max-width: calc(100vw - 32px);
     background: var(--card);
     font-family: 'Poppins', sans-serif;
     border: 1px solid rgba(180, 154, 122, 0.35);
@@ -387,9 +388,42 @@ footer {
 }
 
 @media (max-width: 600px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 10px 16px;
+        gap: 8px 16px;
+    }
+
+    .profile-wrapper {
+        margin-left: auto;
+    }
+
+    .profile-name {
+        display: none;
+    }
+
+    .profile-dropdown {
+        width: calc(100vw - 32px);
+    }
+
+    .category-container {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 16px auto 60px;
+    }
+
+    .category-card {
+        min-height: 180px;
+    }
+
+    .category-card-wide {
+        grid-column: span 1;
+        min-height: 180px;
+    }
+
     .footer-top {
         flex-direction: column;
-        gap: 28px;
+        gap: 24px;
     }
 
     .footer-links {
