@@ -395,7 +395,7 @@ footer {
         font-size: 0.95rem;
     }
 
-    .profile-wrapper {
+    nav > .profile-wrapper {
         position: static;
         border-left: none;
         margin-left: auto;
@@ -405,7 +405,7 @@ footer {
         display: none;
     }
 
-    .profile-dropdown {
+    nav > .profile-wrapper > .profile-dropdown {
         position: absolute;
         top: 100%;
         left: 16px;
