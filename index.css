@@ -242,6 +242,8 @@ nav {
     color: #80684F;
 }
 
+/* Category Styles */
+
 .category-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -295,6 +297,34 @@ nav {
     height: 100%;
     object-fit: cover;
 }
+
+/* Product Category Styles */
+
+
+.category-container-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    gap: 18px;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    margin: 32px auto 64px;
+}
+
+.category-card-product {
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    background-color: #c9d2da;
+    color: var(--nav);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 
 /* Footer styles */
 
